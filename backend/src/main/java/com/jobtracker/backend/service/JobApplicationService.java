@@ -19,7 +19,7 @@ public class JobApplicationService {
     @Autowired // inietta automaticamente un'istanza di JobApplicationRepository
     private JobApplicationRepository jobApplicationRepo;
 
-        @Autowired
+    @Autowired
     private JobApplicationMapper jobApplicationMapper;
 
     public JobApplication createJobApplication(JobApplication jobApplication) {
