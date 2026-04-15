@@ -1,6 +1,7 @@
 package com.jobtracker.backend.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import com.jobtracker.backend.service.JobApplicationService;
 
 @RestController //questa annotazione indica che questa classe è un controller REST, che gestisce le richieste HTTP e restituisce risposte in formato JSON o XML. e un controller invece è
 @RequestMapping("/api/job-applications") //questa annotazione specifica il percorso base per tutte le richieste gestite da questo controller. In questo caso, tutte le richieste che iniziano con "/api/job-applications" saranno indirizzate a questo controller.
+@CrossOrigin(origins = "http://localhost:4200")
 public class JobApplicationAPI {
 
     @Autowired
