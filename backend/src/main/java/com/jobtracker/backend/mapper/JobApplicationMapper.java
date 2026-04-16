@@ -15,10 +15,10 @@ public interface JobApplicationMapper {
 
     @Mapping(source = "placementProfile.id", target = "placementProfileId")
     JobApplicationDTO toDTO(JobApplication jobApplication);
-    
+
     List<JobApplicationDTO> toDTOList(List<JobApplication> jobApplications);
 
-
+    @Mapping(source = "placementProfileId", target = "placementProfile.id")
     JobApplication toEntity(JobApplicationDTO jobApplicationDTO);
     List<JobApplication> toEntityList(List<JobApplicationDTO> jobApplicationDTOs);
 

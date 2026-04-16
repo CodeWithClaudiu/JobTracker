@@ -1,6 +1,7 @@
 package com.jobtracker.backend.api;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jobtracker.backend.dto.WeekApplicationDTO;
+import com.jobtracker.backend.model.WeekStatus;
 import com.jobtracker.backend.service.WeekApplicationService;
 
 @RestController
@@ -51,5 +53,10 @@ public class WeekApplicationAPI {
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
         weekApplicationService.delete(id);
+    }
+
+    @GetMapping("/percentages")
+    public Map<WeekStatus, Double> getPercentages() {
+        return weekApplicationService.getStatusPercentages();
     }
 }
