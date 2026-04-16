@@ -6,11 +6,8 @@ import lombok.Data;
 public class JobApplicationDTO {
     private Long id;
     private String agency;
-    
-
-
     private String linkJob;
     private String source;
-
+    private Long placementProfileId;
     
 }

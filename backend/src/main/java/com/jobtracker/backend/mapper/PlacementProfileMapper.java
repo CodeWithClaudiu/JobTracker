@@ -10,6 +10,7 @@ import com.jobtracker.backend.model.PlacementProfile;
 
 @Mapper(componentModel = "spring")
 public interface PlacementProfileMapper {
+
     
     PlacementProfileDTO toDTO(PlacementProfile placementProfile);
     List<PlacementProfileDTO> toDTOList(List<PlacementProfile> placementProfiles);

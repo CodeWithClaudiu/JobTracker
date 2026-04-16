@@ -3,6 +3,7 @@ package com.jobtracker.backend.mapper;
 import java.util.List;
 
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
 import com.jobtracker.backend.dto.JobApplicationDTO;
 import com.jobtracker.backend.model.JobApplication;
@@ -12,7 +13,9 @@ import com.jobtracker.backend.model.JobApplication;
 //definisce un'interfaccia per il mapping tra l'entità JobApplication e il DTO JobApplicationDTO. MapStruct genererà automaticamente l'implementazione di questa interfaccia durante la compilazione, basandosi sulle convenzioni di naming dei metodi.
 public interface JobApplicationMapper {
 
+    @Mapping(source = "placementProfile.id", target = "placementProfileId")
     JobApplicationDTO toDTO(JobApplication jobApplication);
+    
     List<JobApplicationDTO> toDTOList(List<JobApplication> jobApplications);
 
 
