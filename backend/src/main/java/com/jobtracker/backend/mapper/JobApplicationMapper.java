@@ -18,7 +18,8 @@ public interface JobApplicationMapper {
     
     List<JobApplicationDTO> toDTOList(List<JobApplication> jobApplications);
 
-
+    //definisce un metodo per convertire un DTO in un'entità, mappando il campo placementProfileId del DTO all'ID dell'entità PlacementProfile.
+    @Mapping(source = "placementProfileId", target = "placementProfile.id")
     JobApplication toEntity(JobApplicationDTO jobApplicationDTO);
     List<JobApplication> toEntityList(List<JobApplicationDTO> jobApplicationDTOs);
 
