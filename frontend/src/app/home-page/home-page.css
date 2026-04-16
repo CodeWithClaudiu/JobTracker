@@ -1,0 +1,44 @@
+/* Container principale */
+.card {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: sans-serif;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+h1 { color: #333; margin-bottom: 0.5rem; }
+p { color: #666; margin-bottom: 2rem; font-size: 0.9rem; }
+
+/* Menu dei bottoni */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Spazio tra i bottoni */
+}
+
+button {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  color: #007bff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Effetto Hover semplice */
+button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Stile quando sei sulla pagina (Angular) */
+.active {
+  background-color: #e7f1ff;
+  border: 1px solid #007bff;
+}
