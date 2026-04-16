@@ -25,7 +25,7 @@ public class PlacementProfile {
     
     private String cityPlacement;
 
-    @OneToMany(mappedBy = "portalUser", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "placementProfile", cascade = CascadeType.ALL)
     private List<JobApplication> jobApplications;
 
    

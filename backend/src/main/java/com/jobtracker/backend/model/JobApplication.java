@@ -24,7 +24,7 @@ public class JobApplication {
     private String linkJob;
     private String source;
 
-   @ManyToOne
+    @ManyToOne
     @JoinColumn(name = "placement_profile_id")
     private PlacementProfile placementProfile; 
     
